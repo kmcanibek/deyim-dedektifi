@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import BadgeCollection from './components/BadgeCollection';
+import BackgroundMusic from './components/BackgroundMusic';
 import ChapterCard from './components/ChapterCard';
 import EndScreen from './components/EndScreen';
 import QuestionCard from './components/QuestionCard';
@@ -363,6 +364,7 @@ function App() {
 
   return (
     <main className="app-shell">
+      <BackgroundMusic />
       <StatusBar
         totalScore={totalScore}
         earnedBadgeCount={earnedBadges.length}
