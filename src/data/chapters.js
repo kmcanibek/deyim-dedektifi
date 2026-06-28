@@ -23,8 +23,8 @@ export const chapters = [
       {
         question: '‘Paçayı sıyırmak’ deyimi hangi anlama gelir?',
         options: [
-          'Bir işten zarar görmeden kurtulmak.',
           'Pantolon paçasını temizlemek.',
+          'Bir işten zarar görmeden kurtulmak.',
           'Koşarak uzaklaşmak.',
         ],
         answer: 'Bir işten zarar görmeden kurtulmak.',
@@ -46,9 +46,9 @@ export const chapters = [
       {
         question: '‘Pire için yorgan yakmak’ ne demektir?',
         options: [
-          'Küçük bir sorun için büyük tepki göstermek.',
           'Ev temizliği yapmak.',
           'Bir eşyayı bilerek yakmak.',
+          'Küçük bir sorun için büyük tepki göstermek.',
         ],
         answer: 'Küçük bir sorun için büyük tepki göstermek.',
         explanation:
@@ -76,8 +76,8 @@ export const chapters = [
       {
         question: '‘İçinde fırtınalar kopmak’ ne anlama gelir?',
         options: [
-          'Dışarıdan belli etmese de yoğun duygular yaşamak.',
           'Gerçekten kötü hava şartları oluşmak.',
+          'Dışarıdan belli etmese de yoğun duygular yaşamak.',
           'Çok hızlı koşmak.',
         ],
         answer: 'Dışarıdan belli etmese de yoğun duygular yaşamak.',
@@ -86,7 +86,7 @@ export const chapters = [
       },
       {
         question: '‘Gözden kaçırmak’ deyimi ne demektir?',
-        options: ['Fark etmemek.', 'Bir yere saklanmak.', 'Gözlük kullanmak.'],
+        options: ['Bir yere saklanmak.', 'Gözlük kullanmak.', 'Fark etmemek.'],
         answer: 'Fark etmemek.',
         explanation:
           'Gözden kaçırmak, bir şeyi ya da bir durumu fark etmemek anlamına gelir.',
@@ -116,11 +116,10 @@ export const chapters = [
           'Bu atasözü, yalanın uzun süre gizli kalamayacağını anlatır.',
       },
       {
-        question:
-          '‘Doğru söz yemin istemez.’ atasözü hangi anlama gelir?',
+        question: '‘Doğru söz yemin istemez.’ atasözü hangi anlama gelir?',
         options: [
-          'Gerçek olan şeyin kanıtlanmak için fazla söze ihtiyacı yoktur.',
           'Her sözden önce yemin etmek gerekir.',
+          'Gerçek olan şeyin kanıtlanmak için fazla söze ihtiyacı yoktur.',
           'Doğru konuşanlar hiç hata yapmaz.',
         ],
         answer:
@@ -143,9 +142,9 @@ export const chapters = [
       {
         question: '‘Damlaya damlaya göl olur.’ atasözü ne anlama gelir?',
         options: [
-          'Küçük birikimler zamanla büyük sonuçlar doğurur.',
           'Yağmur yağınca göller oluşur.',
           'Su her zaman değerlidir.',
+          'Küçük birikimler zamanla büyük sonuçlar doğurur.',
         ],
         answer: 'Küçük birikimler zamanla büyük sonuçlar doğurur.',
         explanation:
@@ -154,8 +153,8 @@ export const chapters = [
       {
         question: '‘Sakla samanı, gelir zamanı.’ atasözü ne anlatır?',
         options: [
-          'Önemsiz görünen şeyler bir gün işe yarayabilir.',
           'Saman her zaman saklanmalıdır.',
+          'Önemsiz görünen şeyler bir gün işe yarayabilir.',
           'Eski eşyalar kullanılmaz.',
         ],
         answer: 'Önemsiz görünen şeyler bir gün işe yarayabilir.',
