@@ -13,8 +13,8 @@ export const chapters = [
         questionType: 'multipleChoice',
         question: '‘Bu işte bir bit yeniği var.’ deyimi ne anlama gelir?',
         options: [
-          'Bu işte şüpheli bir durum var.',
           'Bu işte gerçekten böcek var.',
+          'Bu işte şüpheli bir durum var.',
           'Bu iş çok kolay.',
         ],
         answer: 'Bu işte şüpheli bir durum var.',
@@ -108,8 +108,8 @@ export const chapters = [
         question: '‘İçinde fırtınalar kopmak’ ne anlama gelir?',
         options: [
           'Gerçekten kötü hava şartları oluşmak.',
-          'Dışarıdan belli etmese de yoğun duygular yaşamak.',
           'Çok hızlı koşmak.',
+          'Dışarıdan belli etmese de yoğun duygular yaşamak.',
         ],
         answer: 'Dışarıdan belli etmese de yoğun duygular yaşamak.',
         explanation:
@@ -155,8 +155,8 @@ export const chapters = [
         question:
           '‘Yalancının mumu yatsıya kadar yanar.’ atasözü ne anlatır?',
         options: [
-          'Yalanın er ya da geç ortaya çıkacağını.',
           'Mumların gece daha iyi yandığını.',
+          'Yalanın er ya da geç ortaya çıkacağını.',
           'Yalancıların karanlıktan korktuğunu.',
         ],
         answer: 'Yalanın er ya da geç ortaya çıkacağını.',
@@ -245,8 +245,8 @@ export const chapters = [
         question: '‘Ağırdan almak’ deyimi ne anlama gelir?',
         options: [
           'Ağır bir eşya taşımak.',
-          'Bir işi yavaş yapmak veya geciktirmek.',
           'Bir kitabı yere düşürmek.',
+          'Bir işi yavaş yapmak veya geciktirmek.',
         ],
         answer: 'Bir işi yavaş yapmak veya geciktirmek.',
         explanation:
@@ -287,9 +287,9 @@ export const chapters = [
         questionType: 'multipleChoice',
         question: '‘Birlikten kuvvet doğar.’ atasözü ne anlatır?',
         options: [
-          'Herkes tek başına daha başarılı olur.',
           'Spor yapan herkes kazanır.',
           'Birlikte hareket edenler daha güçlü olur.',
+          'Herkes tek başına daha başarılı olur.',
         ],
         answer: 'Birlikte hareket edenler daha güçlü olur.',
         explanation:
@@ -331,8 +331,8 @@ export const chapters = [
         question: '‘Lafı ağzında gevelemek’ deyimi ne anlama gelir?',
         options: [
           'Yemek yerken konuşmak.',
-          'Söylemek istediğini açıkça söylememek.',
           'Çok hızlı konuşmak.',
+          'Söylemek istediğini açıkça söylememek.',
         ],
         answer: 'Söylemek istediğini açıkça söylememek.',
         explanation:
@@ -373,8 +373,8 @@ export const chapters = [
         questionType: 'multipleChoice',
         question: '‘Taşıma suyla değirmen dönmez.’ atasözü ne anlama gelir?',
         options: [
-          'Geçici çözümlerle kalıcı başarı sağlanamaz.',
           'Değirmenler sadece suyla çalışır.',
+          'Geçici çözümlerle kalıcı başarı sağlanamaz.',
           'Su taşımak çok zordur.',
         ],
         answer: 'Geçici çözümlerle kalıcı başarı sağlanamaz.',
@@ -418,8 +418,8 @@ export const chapters = [
           'Final hikâyesine göre Deyim Dedektifi’nin asıl başarısı nedir?',
         options: [
           'Anlam Hırsızı’nı cezalandırmak.',
-          'Anlamları ezberlemek değil, doğru yerde kullanmayı öğrenmek.',
           'Bütün kitapları saklamak.',
+          'Anlamları ezberlemek değil, doğru yerde kullanmayı öğrenmek.',
         ],
         answer: 'Anlamları ezberlemek değil, doğru yerde kullanmayı öğrenmek.',
         explanation:
