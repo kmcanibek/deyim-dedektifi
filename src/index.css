@@ -484,6 +484,30 @@ h2 {
   color: #714414;
 }
 
+.final-button {
+  display: block;
+  min-height: 52px;
+  margin: 28px auto 0;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #d79a38, #8a5a16);
+  box-shadow: 0 14px 28px rgba(138, 90, 22, 0.24);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 950;
+  padding: 14px 20px;
+  transition:
+    box-shadow 160ms ease,
+    filter 160ms ease,
+    transform 160ms ease;
+}
+
+.final-button:hover {
+  box-shadow: 0 18px 34px rgba(138, 90, 22, 0.3);
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+}
+
 .reset-progress-button:hover {
   background: rgba(240, 184, 79, 0.18);
 }
@@ -546,6 +570,18 @@ h2 {
   line-height: 1.25;
 }
 
+.question-type {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: rgba(33, 111, 143, 0.12);
+  color: #1e5e68;
+  font-size: 0.82rem;
+  font-weight: 900;
+  padding: 7px 10px;
+}
+
 .chapter-story-card p {
   margin: 0;
   color: #40506a;
@@ -601,6 +637,48 @@ h2 {
   opacity: 0.95;
 }
 
+.written-answer {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 18px;
+  border: 1px solid rgba(36, 59, 83, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  color: #243247;
+  font: inherit;
+  font-weight: 750;
+  line-height: 1.5;
+  padding: 14px 16px;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.written-answer:focus {
+  border-color: #216f8f;
+  box-shadow: 0 0 0 4px rgba(33, 111, 143, 0.12);
+  outline: none;
+}
+
+.written-answer:disabled {
+  opacity: 0.72;
+}
+
+.written-answer-large {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.validation-message {
+  margin: 12px 0 0;
+  border-radius: 8px;
+  background: rgba(220, 112, 67, 0.12);
+  color: #7a3417;
+  font-weight: 850;
+  line-height: 1.5;
+  padding: 10px 12px;
+}
+
 .answer-button {
   width: 100%;
   margin-top: 18px;
@@ -637,6 +715,10 @@ h2 {
 .complete-screen {
   max-width: 760px;
   text-align: center;
+}
+
+.final-screen {
+  max-width: 820px;
 }
 
 .complete-badge {
@@ -766,7 +848,8 @@ h2 {
   .back-button,
   .chapter-button,
   .answer-button,
-  .reset-progress-button {
+  .reset-progress-button,
+  .final-button {
     width: 100%;
     min-height: 52px;
   }

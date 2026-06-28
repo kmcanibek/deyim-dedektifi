@@ -10,6 +10,7 @@ export const chapters = [
     badge: 'İlk İpucu',
     questions: [
       {
+        questionType: 'multipleChoice',
         question: '‘Bu işte bir bit yeniği var.’ deyimi ne anlama gelir?',
         options: [
           'Bu işte şüpheli bir durum var.',
@@ -21,15 +22,27 @@ export const chapters = [
           'Bir bit yeniği var deyimi, bir olayda şüpheli veya gizli bir durum olduğunu anlatır.',
       },
       {
-        question: '‘Paçayı sıyırmak’ deyimi hangi anlama gelir?',
-        options: [
-          'Pantolon paçasını temizlemek.',
-          'Bir işten zarar görmeden kurtulmak.',
-          'Koşarak uzaklaşmak.',
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi uygun deyimle tamamla: Öğretmenler bu olayda gizli bir durum olduğunu düşününce “Bu işte ______.” dedi.',
+        answer: 'bir bit yeniği var',
+        acceptedAnswers: [
+          'bir bit yeniği var',
+          'bit yeniği var',
+          'bu işte bir bit yeniği var',
         ],
-        answer: 'Bir işten zarar görmeden kurtulmak.',
         explanation:
-          'Paçayı sıyırmak, zor veya kötü bir durumdan kurtulmak anlamına gelir.',
+          'Bir olayda şüpheli veya gizli bir durum olduğunu anlatmak için “bir bit yeniği var” deyimi kullanılır.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          '“Paçayı sıyırmak” deyiminin kullanılabileceği bir okul olayı örneği yaz.',
+        answerKeywords: ['kurtulmak', 'zarar görmeden', 'ceza', 'zor durum'],
+        sampleAnswer:
+          'Öğrenci yaptığı hatadan zarar görmeden veya ceza almadan kurtulursa paçayı sıyırmış olur.',
+        explanation:
+          'Paçayı sıyırmak, zor veya kötü bir durumdan zarar görmeden kurtulmak anlamına gelir.',
       },
     ],
   },
@@ -44,6 +57,7 @@ export const chapters = [
     badge: 'Anlam Avcısı',
     questions: [
       {
+        questionType: 'multipleChoice',
         question: '‘Pire için yorgan yakmak’ ne demektir?',
         options: [
           'Ev temizliği yapmak.',
@@ -55,11 +69,27 @@ export const chapters = [
           'Pire için yorgan yakmak, küçük bir mesele yüzünden büyük ve gereksiz bir tepki vermek anlamına gelir.',
       },
       {
-        question: '‘Küplere binmek’ deyimi hangi duyguyu anlatır?',
-        options: ['Çok öfkelenmek.', 'Çok sevinmek.', 'Çok yorulmak.'],
-        answer: 'Çok öfkelenmek.',
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi tamamla: Son tost yüzünden bu kadar kavga etmek, ______ gibiydi.',
+        answer: 'pire için yorgan yakmak',
+        acceptedAnswers: [
+          'pire için yorgan yakmak',
+          'pire için yorgan yakmaktır',
+          'pire için yorgan yakmak gibiydi',
+        ],
         explanation:
-          'Küplere binmek, çok sinirlenmek ve öfkelenmek anlamında kullanılan bir deyimdir.',
+          'Küçük bir sorun için çok büyük tepki gösterildiğinde bu deyim kullanılır.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          '“Küplere binmek” deyimini kantindeki olayla ilişkilendirerek açıkla.',
+        answerKeywords: ['öfkelenmek', 'sinirlenmek', 'kızmak', 'bağırmak'],
+        sampleAnswer:
+          'Bir öğrenci son tost yüzünden çok sinirlenip bağırınca küplere binmiş olur.',
+        explanation:
+          'Küplere binmek, çok öfkelenmek ve sinirlenmek anlamında kullanılan bir deyimdir.',
       },
     ],
   },
@@ -74,6 +104,7 @@ export const chapters = [
     badge: 'Söz Ustası',
     questions: [
       {
+        questionType: 'multipleChoice',
         question: '‘İçinde fırtınalar kopmak’ ne anlama gelir?',
         options: [
           'Gerçekten kötü hava şartları oluşmak.',
@@ -85,11 +116,27 @@ export const chapters = [
           'İçinde fırtınalar kopmak, kişinin iç dünyasında güçlü duygular yaşadığını anlatır.',
       },
       {
-        question: '‘Gözden kaçırmak’ deyimi ne demektir?',
-        options: ['Bir yere saklanmak.', 'Gözlük kullanmak.', 'Fark etmemek.'],
-        answer: 'Fark etmemek.',
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi tamamla: Arkadaşları onun yeteneğini fark etmemiş, onu ______.',
+        answer: 'gözden kaçırmış',
+        acceptedAnswers: [
+          'gözden kaçırmış',
+          'gözden kaçırmışlar',
+          'gözden kaçırmak',
+        ],
         explanation:
           'Gözden kaçırmak, bir şeyi ya da bir durumu fark etmemek anlamına gelir.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          'Sessiz bir öğrencinin “içinde fırtınalar kopması” nasıl bir durum olabilir?',
+        answerKeywords: ['duygu', 'iç dünya', 'üzüntü', 'heyecan', 'düşünce'],
+        sampleAnswer:
+          'Öğrenci dışarıdan sakin görünse de içinde yoğun duygular, düşünceler veya heyecanlar yaşayabilir.',
+        explanation:
+          'Bu deyim, dışarıdan belli edilmeyen güçlü iç duyguları anlatır.',
       },
     ],
   },
@@ -104,6 +151,7 @@ export const chapters = [
     badge: 'Atasözü Hâkimi',
     questions: [
       {
+        questionType: 'multipleChoice',
         question:
           '‘Yalancının mumu yatsıya kadar yanar.’ atasözü ne anlatır?',
         options: [
@@ -116,16 +164,26 @@ export const chapters = [
           'Bu atasözü, yalanın uzun süre gizli kalamayacağını anlatır.',
       },
       {
-        question: '‘Doğru söz yemin istemez.’ atasözü hangi anlama gelir?',
-        options: [
-          'Her sözden önce yemin etmek gerekir.',
-          'Gerçek olan şeyin kanıtlanmak için fazla söze ihtiyacı yoktur.',
-          'Doğru konuşanlar hiç hata yapmaz.',
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi tamamla: Esnafın yalanı kısa sürede ortaya çıktı; çünkü ______.',
+        answer: 'yalancının mumu yatsıya kadar yanar',
+        acceptedAnswers: [
+          'yalancının mumu yatsıya kadar yanar',
+          'yalancının mumu yatsıya kadar yanar.',
         ],
-        answer:
-          'Gerçek olan şeyin kanıtlanmak için fazla söze ihtiyacı yoktur.',
         explanation:
-          'Bu atasözü, doğru ve açık olan bir sözün ayrıca yeminle desteklenmesine gerek olmadığını anlatır.',
+          'Bu atasözü, yalanın bir süre sonra mutlaka ortaya çıkacağını anlatır.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          '“Doğru söz yemin istemez.” atasözünü pazardaki olayla ilişkilendirerek açıkla.',
+        answerKeywords: ['doğru', 'kanıt', 'yemin', 'gerçek', 'açık'],
+        sampleAnswer:
+          'Söz doğru ve açıksa onu kanıtlamak için sürekli yemin etmeye gerek yoktur.',
+        explanation:
+          'Bu atasözü, gerçek olan bir sözün ayrıca yeminle desteklenmesine gerek olmadığını anlatır.',
       },
     ],
   },
@@ -140,6 +198,7 @@ export const chapters = [
     badge: 'Büyük Deyim Dedektifi',
     questions: [
       {
+        questionType: 'multipleChoice',
         question: '‘Damlaya damlaya göl olur.’ atasözü ne anlama gelir?',
         options: [
           'Yağmur yağınca göller oluşur.',
@@ -151,15 +210,239 @@ export const chapters = [
           'Bu atasözü, küçük ama düzenli çabaların zamanla büyük sonuçlara ulaşacağını anlatır.',
       },
       {
-        question: '‘Sakla samanı, gelir zamanı.’ atasözü ne anlatır?',
-        options: [
-          'Saman her zaman saklanmalıdır.',
-          'Önemsiz görünen şeyler bir gün işe yarayabilir.',
-          'Eski eşyalar kullanılmaz.',
-        ],
-        answer: 'Önemsiz görünen şeyler bir gün işe yarayabilir.',
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi tamamla: Küçük küçük öğrenmeler zamanla büyür; çünkü ______.',
+        answer: 'damlaya damlaya göl olur',
+        acceptedAnswers: ['damlaya damlaya göl olur'],
         explanation:
-          'Bu atasözü, bugün değersiz görünen bir şeyin ileride gerekli olabileceğini anlatır.',
+          'Bu atasözü, küçük ve düzenli birikimlerin zamanla büyük sonuçlar doğuracağını anlatır.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          '“Sakla samanı, gelir zamanı.” atasözü bilgiyi küçümsememekle nasıl ilişkilidir?',
+        answerKeywords: ['işe yarar', 'zamanı gelir', 'önemsiz', 'gerekli'],
+        sampleAnswer:
+          'Bugün önemsiz görünen bir bilgi ya da şey, ileride gerekli ve işe yarar hale gelebilir.',
+        explanation:
+          'Bu atasözü, değersiz görünen şeylerin zamanı geldiğinde işe yarayabileceğini anlatır.',
+      },
+    ],
+  },
+  {
+    id: 6,
+    icon: '📚',
+    title: 'Kütüphanedeki Sessiz Alarm',
+    description:
+      'Kütüphanedeki kitaplar yanlış raflara yerleşmeye başladı. Her kitap, içindeki atasözünü kaybetmiş gibi davranıyor.',
+    story:
+      'Sözler Şehri Kütüphanesi her zaman sessizdi. Fakat o gün raflardaki kitaplar kendi kendine yer değiştirmeye başladı. Kütüphaneci, ‘Kitapları gözden geçirmek gerekiyordu ama biz bu işi ağırdan aldık.’ dedi. Bir öğrenci ise kaybolan kitabı bulunca ‘Arayan Mevla’sını da bulur, belasını da.’ sözünü yanlış anlayıp korkuya kapıldı. Deyim Dedektifi olarak kütüphanedeki anlam karmaşasını çözmelisin.',
+    badge: 'Kitap İzcisi',
+    questions: [
+      {
+        questionType: 'multipleChoice',
+        question: '‘Ağırdan almak’ deyimi ne anlama gelir?',
+        options: [
+          'Ağır bir eşya taşımak.',
+          'Bir işi yavaş yapmak veya geciktirmek.',
+          'Bir kitabı yere düşürmek.',
+        ],
+        answer: 'Bir işi yavaş yapmak veya geciktirmek.',
+        explanation:
+          'Ağırdan almak, bir işi isteyerek veya istemeyerek yavaş yapmak, geciktirmek anlamına gelir.',
+      },
+      {
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi uygun deyimle tamamla: Kütüphaneci işleri zamanında yapmadığı için bu işi biraz ______.',
+        answer: 'ağırdan aldı',
+        acceptedAnswers: ['ağırdan aldı', 'ağırdan almak', 'ağırdan almış'],
+        explanation:
+          'Cümlede bir işin geciktirilmesi anlatıldığı için “ağırdan almak” deyimi uygundur.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          '‘Arayan Mevla’sını da bulur, belasını da.’ atasözü hangi durumlarda kullanılabilir? Kısaca açıkla.',
+        answerKeywords: ['aramak', 'sonuç', 'iyi', 'kötü', 'karşılaşmak'],
+        sampleAnswer:
+          'Bu atasözü, bir şeyi arayan kişinin arayışının sonunda iyi ya da kötü bir sonuçla karşılaşabileceğini anlatır.',
+        explanation:
+          'Atasözü, arayışın her zaman beklenen sonucu vermeyebileceğini belirtir.',
+      },
+    ],
+  },
+  {
+    id: 7,
+    icon: '🏀',
+    title: 'Spor Salonunda Büyük Rekabet',
+    description:
+      'Okul takımında herkes kazanmak istiyor ama bazıları hırsını kontrol edemiyor.',
+    story:
+      'Spor salonunda final maçı yaklaşırken takım ikiye bölünmüştü. Bir öğrenci sürekli arkadaşlarını suçluyor, bir diğeri ise ‘Birlikten kuvvet doğar.’ diyerek takımı toparlamaya çalışıyordu. Koç, ‘Hırsına yenilen, oyunu da arkadaşını da kaybeder.’ dedi. Deyim Dedektifi olarak takımın sadece maçı değil, anlamı da kazanmasına yardım etmelisin.',
+    badge: 'Takım Ruhu',
+    questions: [
+      {
+        questionType: 'multipleChoice',
+        question: '‘Birlikten kuvvet doğar.’ atasözü ne anlatır?',
+        options: [
+          'Herkes tek başına daha başarılı olur.',
+          'Spor yapan herkes kazanır.',
+          'Birlikte hareket edenler daha güçlü olur.',
+        ],
+        answer: 'Birlikte hareket edenler daha güçlü olur.',
+        explanation:
+          'Bu atasözü, dayanışma ve birlikte hareket etmenin gücünü anlatır.',
+      },
+      {
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi tamamla: Takım birlikte hareket edince anladılar ki ______.',
+        answer: 'birlikten kuvvet doğar',
+        acceptedAnswers: ['birlikten kuvvet doğar'],
+        explanation:
+          'Takım çalışmasını anlatan en uygun atasözü “Birlikten kuvvet doğar.” sözüdür.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          'Bir maçta “birlikten kuvvet doğar” atasözüne uygun bir davranış örneği yaz.',
+        answerKeywords: ['yardım', 'takım', 'birlikte', 'pas', 'destek'],
+        sampleAnswer:
+          'Oyuncuların birbirine pas vermesi, hata yapan arkadaşını suçlamaması ve birlikte savunma yapması bu atasözüne uygundur.',
+        explanation:
+          'Atasözü, bireysel başarıdan çok dayanışmanın önemini vurgular.',
+      },
+    ],
+  },
+  {
+    id: 8,
+    icon: '🚲',
+    title: 'Mahalledeki Kayıp Bisiklet',
+    description:
+      'Mahallede kaybolan bir bisiklet, dedikoduların ve yanlış anlamaların büyümesine neden olur.',
+    story:
+      'Sözler Şehri Mahallesi’nde bir bisiklet kayboldu. Herkes farklı birini suçlamaya başladı. Yaşlı bir komşu, ‘Ateş olmayan yerden duman çıkmaz.’ deyince çocuklar gerçekten duman aradı. Fakat Deyim Dedektifi hemen anladı: Her duyulan söz doğru olmayabilirdi. Çünkü bazen insanlar lafı ağızlarında geveleyerek gerçeği saklar.',
+    badge: 'İz Sürücü',
+    questions: [
+      {
+        questionType: 'multipleChoice',
+        question: '‘Lafı ağzında gevelemek’ deyimi ne anlama gelir?',
+        options: [
+          'Yemek yerken konuşmak.',
+          'Söylemek istediğini açıkça söylememek.',
+          'Çok hızlı konuşmak.',
+        ],
+        answer: 'Söylemek istediğini açıkça söylememek.',
+        explanation:
+          'Lafı ağzında gevelemek, düşünceyi açık ve net biçimde söylememek anlamına gelir.',
+      },
+      {
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi uygun deyimle tamamla: Gerçeği bildiği hâlde açıkça konuşmadı, lafı ağzında ______.',
+        answer: 'geveledi',
+        acceptedAnswers: ['geveledi', 'lafı ağzında geveledi', 'ağzında geveledi'],
+        explanation:
+          'Cümlede açık konuşmamak anlamı olduğu için “lafı ağzında gevelemek” deyimi uygundur.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          '‘Ateş olmayan yerden duman çıkmaz.’ atasözünü bu olayla ilişkilendirerek açıkla.',
+        answerKeywords: ['belirti', 'şüphe', 'dedikodu', 'gerçek', 'olay'],
+        sampleAnswer:
+          'Bu atasözü, ortada bir söylenti veya belirti varsa bunun bir sebebi olabileceğini anlatır. Ancak kesin kanıt olmadan kimse suçlanmamalıdır.',
+        explanation:
+          'Atasözü şüpheyi anlatır fakat tek başına kesin kanıt sayılmaz.',
+      },
+    ],
+  },
+  {
+    id: 9,
+    icon: '🏛️',
+    title: 'Sözler Şehri Meclisi',
+    description:
+      'Şehirde herkes anlamların nasıl korunacağı konusunda tartışır. Son kararı Deyim Dedektifi verecektir.',
+    story:
+      'Sözler Şehri Meclisi acil toplandı. Bazıları deyim ve atasözlerinin artık kullanılmaması gerektiğini savundu. Bazıları ise ‘Geçmişini bilmeyen geleceğine yön veremez.’ diyerek sözlerin korunmasını istedi. Başkan, ‘Taşıma suyla değirmen dönmez.’ diyerek kalıcı bir çözüm bulunması gerektiğini söyledi. Deyim Dedektifi artık sadece ipucu toplamıyor, şehrin geleceğine de karar veriyordu.',
+    badge: 'Söz Koruyucusu',
+    questions: [
+      {
+        questionType: 'multipleChoice',
+        question: '‘Taşıma suyla değirmen dönmez.’ atasözü ne anlama gelir?',
+        options: [
+          'Geçici çözümlerle kalıcı başarı sağlanamaz.',
+          'Değirmenler sadece suyla çalışır.',
+          'Su taşımak çok zordur.',
+        ],
+        answer: 'Geçici çözümlerle kalıcı başarı sağlanamaz.',
+        explanation:
+          'Bu atasözü, bir işi sürdürebilmek için kalıcı ve sağlam kaynaklara ihtiyaç olduğunu anlatır.',
+      },
+      {
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi tamamla: Şehrin anlamlarını sadece birkaç günlüğüne düzeltmek yetmez, çünkü ______.',
+        answer: 'taşıma suyla değirmen dönmez',
+        acceptedAnswers: ['taşıma suyla değirmen dönmez'],
+        explanation:
+          'Kalıcı çözüm gerektiğini anlatan atasözü “Taşıma suyla değirmen dönmez.” sözüdür.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          'Sence deyim ve atasözleri neden korunmalıdır? Kısa bir cevap yaz.',
+        answerKeywords: ['kültür', 'geçmiş', 'dil', 'anlam', 'deneyim', 'öğüt'],
+        sampleAnswer:
+          'Deyim ve atasözleri kültürümüzü, geçmiş deneyimleri ve dilimizin zenginliğini yansıttığı için korunmalıdır.',
+        explanation:
+          'Deyim ve atasözleri yalnızca kalıplaşmış sözler değil, toplumun kültürel hafızasıdır.',
+      },
+    ],
+  },
+  {
+    id: 10,
+    icon: '🗝️',
+    title: 'Büyük Sözlük Kulesi',
+    description:
+      'Anlamlar Kitabı’nın son sayfası hâlâ boştur. Bu sayfayı ancak gerçek bir Deyim Dedektifi tamamlayabilir.',
+    story:
+      'Deyim Dedektifi sonunda Büyük Sözlük Kulesi’nin en üst katına çıktı. Anlam Hırsızı oradaydı. Elinde Anlamlar Kitabı vardı ama kitabın son sayfası bomboştu. Hırsız, ‘Ben bu sözleri hiç anlayamadım. Herkes bildi, ben bilemedim.’ dedi. Dedektif ona kızmadı. ‘Damlaya damlaya göl olur.’ diyerek öğrenmenin zamanla gerçekleştiğini anlattı. Sonra kitabın son sayfasına şunu yazdı: ‘Sözleri ezberleyen değil, anlamını yerinde kullanan kişi gerçek söz ustasıdır.’ O anda şehirdeki bütün tabelalar, kitaplar ve konuşmalar eski anlamına kavuştu.',
+    badge: 'Büyük Söz Ustası',
+    questions: [
+      {
+        questionType: 'multipleChoice',
+        question:
+          'Final hikâyesine göre Deyim Dedektifi’nin asıl başarısı nedir?',
+        options: [
+          'Anlam Hırsızı’nı cezalandırmak.',
+          'Anlamları ezberlemek değil, doğru yerde kullanmayı öğrenmek.',
+          'Bütün kitapları saklamak.',
+        ],
+        answer: 'Anlamları ezberlemek değil, doğru yerde kullanmayı öğrenmek.',
+        explanation:
+          'Finalde asıl vurgu, deyim ve atasözlerini ezberlemekten çok bağlamına uygun kullanmaktır.',
+      },
+      {
+        questionType: 'fillBlank',
+        question:
+          'Cümleyi tamamla: Küçük küçük öğrenmeler zamanla büyür, çünkü ______.',
+        answer: 'damlaya damlaya göl olur',
+        acceptedAnswers: ['damlaya damlaya göl olur'],
+        explanation:
+          'Bu atasözü, küçük ve düzenli çabaların zamanla büyük sonuçlar doğuracağını anlatır.',
+      },
+      {
+        questionType: 'shortAnswer',
+        question:
+          'Bu oyunun sonunda Anlam Hırsızı’na deyim ve atasözleri hakkında ne söylemek isterdin?',
+        answerKeywords: ['öğrenmek', 'anlamak', 'zaman', 'sabır', 'kullanmak', 'anlam'],
+        sampleAnswer:
+          'Ona bu sözleri hemen ezberlemek zorunda olmadığını, zamanla ve örneklerle öğrenebileceğini söylerdim.',
+        explanation:
+          'Bu soru, öğrencinin oyunun ana fikrini kendi cümlesiyle ifade etmesini sağlar.',
       },
     ],
   },

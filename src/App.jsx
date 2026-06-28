@@ -20,6 +20,12 @@ const initialChapterState = {
   score: 0,
 };
 
+const questionScores = {
+  multipleChoice: 10,
+  fillBlank: 15,
+  shortAnswer: 20,
+};
+
 const readStoredValue = (key, fallbackValue) => {
   try {
     const storedValue = localStorage.getItem(key);
@@ -111,15 +117,18 @@ function App() {
     setScreen('chapter');
   };
 
-  const answerQuestion = () => {
-    if (!selectedOption || isAnswered) {
+  const answerQuestion = (isCorrect) => {
+    if (isAnswered) {
       return;
     }
 
     const currentQuestion = selectedChapter.questions[currentQuestionIndex];
 
-    if (selectedOption === currentQuestion.answer) {
-      setScore((currentScore) => currentScore + 10);
+    if (isCorrect) {
+      setScore(
+        (currentScore) =>
+          currentScore + questionScores[currentQuestion.questionType],
+      );
     }
 
     setIsAnswered(true);
@@ -179,14 +188,32 @@ function App() {
     try {
       localStorage.removeItem(storageKeys.totalScore);
       localStorage.removeItem(storageKeys.completedChapters);
-      localStorage.removeItem(storageKeys.earnedBadges);
+    localStorage.removeItem(storageKeys.earnedBadges);
     } catch {
       // localStorage kullanılamıyorsa ek bir işlem gerekmez.
     }
   };
 
+  const restartGame = () => {
+    setTotalScore(0);
+    setCompletedChapters([]);
+    setEarnedBadges([]);
+    resetChapterProgress();
+
+    try {
+      localStorage.removeItem(storageKeys.totalScore);
+      localStorage.removeItem(storageKeys.completedChapters);
+      localStorage.removeItem(storageKeys.earnedBadges);
+    } catch {
+      // localStorage kullanılamıyorsa ek bir işlem gerekmez.
+    }
+
+    setScreen('home');
+  };
+
   const renderHomeScreen = () => {
     const hasProgress = completedChapters.length > 0;
+    const isGameComplete = completedChapters.length === chapters.length;
 
     return (
       <section className="hero-card" aria-labelledby="app-title">
@@ -222,9 +249,11 @@ function App() {
         </button>
 
         <p className="home-progress-summary">
-          {hasProgress
-            ? `Şu ana kadar ${completedChapters.length} görev dosyası tamamladın ve ${earnedBadges.length} rozet kazandın.`
-            : 'Henüz hiçbir görev dosyası tamamlanmadı. İlk ipucunu bulmak için dedektifliğe başla.'}
+          {isGameComplete
+            ? 'Tüm görev dosyalarını tamamladın. Finali görmek için Görev Dosyaları ekranına geç.'
+            : hasProgress
+              ? `Şu ana kadar ${completedChapters.length} görev dosyası tamamladın ve ${earnedBadges.length} rozet kazandın.`
+              : 'Henüz hiçbir görev dosyası tamamlanmadı. İlk ipucunu bulmak için dedektifliğe başla.'}
         </p>
       </section>
     );
@@ -257,6 +286,16 @@ function App() {
       </div>
 
       <BadgeCollection chapters={chapters} earnedBadges={earnedBadges} />
+
+      {completedChapters.length === chapters.length && (
+        <button
+          className="final-button"
+          type="button"
+          onClick={() => setScreen('final')}
+        >
+          Finali Gör
+        </button>
+      )}
 
       <button
         className="reset-progress-button"
@@ -293,6 +332,7 @@ function App() {
           </article>
 
           <QuestionCard
+            key={currentQuestion.question}
             question={currentQuestion}
             selectedOption={selectedOption}
             isAnswered={isAnswered}
@@ -330,6 +370,34 @@ function App() {
       {screen === 'chapterComplete' &&
         selectedChapter &&
         renderChapterCompleteScreen()}
+      {screen === 'final' && completedChapters.length === chapters.length && (
+        <section className="complete-screen final-screen" aria-labelledby="final-title">
+          <div className="complete-badge">Büyük Söz Ustası Sertifikası</div>
+          <h2 id="final-title">Anlamlar Kitabı Tamamlandı</h2>
+          <p>
+            Sözler Şehri artık eski anlamına kavuştu. Deyimleri, atasözlerini ve
+            onların gerçek anlamlarını çözerek Anlamlar Kitabı’nın son sayfasını
+            sen tamamladın.
+          </p>
+          <p className="completion-note">
+            Artık sen yalnızca soruları cevaplayan biri değilsin. Sözleri
+            nerede, nasıl ve neden kullanacağını bilen gerçek bir Büyük Söz
+            Ustasısın.
+          </p>
+          <div className="reward-card">
+            <span>Final ödülü</span>
+            <strong>Büyük Söz Ustası Sertifikası</strong>
+          </div>
+          <div className="complete-actions">
+            <button className="chapter-button" type="button" onClick={goChapters}>
+              Görev Dosyalarına Dön
+            </button>
+            <button className="back-button" type="button" onClick={restartGame}>
+              Oyunu Baştan Başlat
+            </button>
+          </div>
+        </section>
+      )}
     </main>
   );
 }
