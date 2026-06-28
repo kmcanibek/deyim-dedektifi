@@ -1,7 +1,19 @@
+import anlamHirsizininIzindeCover from '../assets/chapter-covers/anlam-hirsizinin-izinde.webp';
+import buyukSozlukKulesiCover from '../assets/chapter-covers/buyuk-sozluk-kulesi.webp';
+import kantindekiBuyukTartismaCover from '../assets/chapter-covers/kantindeki-buyuk-tartisma.webp';
+import kayipSinavKagitlariCover from '../assets/chapter-covers/kayip-sinav-kagitlari.webp';
+import kutuphanedekiSessizAlarmCover from '../assets/chapter-covers/kutuphanedeki-sessiz-alarm.webp';
+import mahalledekiKayipBisikletCover from '../assets/chapter-covers/mahalledeki-kayip-bisiklet.webp';
+import pazardakiKurnazEsnafCover from '../assets/chapter-covers/pazardaki-kurnaz-esnaf.webp';
+import sessizOgrencininSirriCover from '../assets/chapter-covers/sessiz-ogrencinin-sirri.webp';
+import sozlerSehriMeclisiCover from '../assets/chapter-covers/sozler-sehri-meclisi.webp';
+import sporSalonundaBuyukRekabetCover from '../assets/chapter-covers/spor-salonunda-buyuk-rekabet.webp';
+
 export const chapters = [
   {
     id: 1,
     icon: '📝',
+    coverImage: kayipSinavKagitlariCover,
     title: 'Kayıp Sınav Kâğıtları',
     description:
       'Okulda sınav kâğıtları kayboldu. Öğretmenler odasında herkes panik içinde. Bu işte gerçekten bir bit yeniği var mı?',
@@ -49,6 +61,7 @@ export const chapters = [
   {
     id: 2,
     icon: '🥪',
+    coverImage: kantindekiBuyukTartismaCover,
     title: 'Kantindeki Büyük Tartışma',
     description:
       'Son tost yüzünden kantinde ortalık karıştı. Öğrenciler deyimleri gerçek anlamlarıyla anlamaya başlayınca işler iyice büyüdü.',
@@ -96,6 +109,7 @@ export const chapters = [
   {
     id: 3,
     icon: '📓',
+    coverImage: sessizOgrencininSirriCover,
     title: 'Sessiz Öğrencinin Sırrı',
     description:
       'Sınıfta kimsenin fark etmediği sessiz bir öğrenci, defterinde bambaşka bir dünya saklıyor.',
@@ -143,6 +157,7 @@ export const chapters = [
   {
     id: 4,
     icon: '⚖️',
+    coverImage: pazardakiKurnazEsnafCover,
     title: 'Pazardaki Kurnaz Esnaf',
     description:
       'Sözler Şehri Pazarı’nda bazı işler yolunda gitmiyor. Yalanlar, atasözlerinin ışığında ortaya çıkacak.',
@@ -190,6 +205,7 @@ export const chapters = [
   {
     id: 5,
     icon: '🕵️',
+    coverImage: anlamHirsizininIzindeCover,
     title: 'Anlam Hırsızı’nın İzinde',
     description:
       'Anlamlar Kitabı’nı kimin aldığına dair son ipuçları seni Büyük Sözlük Kulesi’ne götürüyor.',
@@ -233,6 +249,7 @@ export const chapters = [
   {
     id: 6,
     icon: '📚',
+    coverImage: kutuphanedekiSessizAlarmCover,
     title: 'Kütüphanedeki Sessiz Alarm',
     description:
       'Kütüphanedeki kitaplar yanlış raflara yerleşmeye başladı. Her kitap, içindeki atasözünü kaybetmiş gibi davranıyor.',
@@ -276,6 +293,7 @@ export const chapters = [
   {
     id: 7,
     icon: '🏀',
+    coverImage: sporSalonundaBuyukRekabetCover,
     title: 'Spor Salonunda Büyük Rekabet',
     description:
       'Okul takımında herkes kazanmak istiyor ama bazıları hırsını kontrol edemiyor.',
@@ -319,6 +337,7 @@ export const chapters = [
   {
     id: 8,
     icon: '🚲',
+    coverImage: mahalledekiKayipBisikletCover,
     title: 'Mahalledeki Kayıp Bisiklet',
     description:
       'Mahallede kaybolan bir bisiklet, dedikoduların ve yanlış anlamaların büyümesine neden olur.',
@@ -362,6 +381,7 @@ export const chapters = [
   {
     id: 9,
     icon: '🏛️',
+    coverImage: sozlerSehriMeclisiCover,
     title: 'Sözler Şehri Meclisi',
     description:
       'Şehirde herkes anlamların nasıl korunacağı konusunda tartışır. Son kararı Deyim Dedektifi verecektir.',
@@ -405,6 +425,7 @@ export const chapters = [
   {
     id: 10,
     icon: '🗝️',
+    coverImage: buyukSozlukKulesiCover,
     title: 'Büyük Sözlük Kulesi',
     description:
       'Anlamlar Kitabı’nın son sayfası hâlâ boştur. Bu sayfayı ancak gerçek bir Deyim Dedektifi tamamlayabilir.',

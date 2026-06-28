@@ -327,6 +327,11 @@ function App() {
 
         <div className="chapter-layout">
           <article className="chapter-story-card">
+            <img
+              className="chapter-story-image"
+              src={selectedChapter.coverImage}
+              alt={`${selectedChapter.title} hikâye görseli`}
+            />
             <h3>Bölüm Hikâyesi</h3>
             <p>{selectedChapter.story}</p>
           </article>

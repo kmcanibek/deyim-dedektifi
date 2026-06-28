@@ -1,6 +1,10 @@
 function ChapterCard({ chapter, isCompleted, onOpen }) {
   return (
     <article className={`chapter-card ${isCompleted ? 'is-completed' : ''}`}>
+      <div className="chapter-cover">
+        <img src={chapter.coverImage} alt={`${chapter.title} bölüm görseli`} />
+      </div>
+
       <span className="chapter-icon" aria-hidden="true">
         {chapter.icon}
       </span>

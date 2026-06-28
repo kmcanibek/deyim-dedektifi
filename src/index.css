@@ -291,6 +291,7 @@ h2 {
 }
 
 .chapter-card {
+  position: relative;
   display: flex;
   min-height: 330px;
   flex-direction: column;
@@ -303,6 +304,33 @@ h2 {
   transition:
     box-shadow 180ms ease,
     transform 180ms ease;
+}
+
+.chapter-cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #172033;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+}
+
+.chapter-cover::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 20, 38, 0), rgba(12, 20, 38, 0.18));
+  content: "";
+  pointer-events: none;
+}
+
+.chapter-cover img,
+.chapter-story-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .chapter-card:hover {
@@ -327,6 +355,13 @@ h2 {
   background: linear-gradient(135deg, rgba(243, 209, 132, 0.94), rgba(255, 248, 232, 0.92));
   box-shadow: 0 10px 20px rgba(215, 154, 56, 0.16);
   font-size: 1.45rem;
+}
+
+.chapter-card .chapter-icon {
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  backdrop-filter: blur(6px);
 }
 
 .chapter-number,
@@ -560,7 +595,17 @@ h2 {
 }
 
 .chapter-story-card {
+  position: relative;
+  overflow: hidden;
   border-left: 5px solid #d79a38;
+}
+
+.chapter-story-image {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin: calc(clamp(20px, 4vw, 28px) * -1)
+    calc(clamp(20px, 4vw, 28px) * -1) 22px;
+  max-width: none;
 }
 
 .chapter-story-card h3,
